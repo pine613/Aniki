@@ -8,6 +8,7 @@ perl:
   - "5.20"
 
 before_install:
+  - cpanm --quiet --notest --skip-satisfied Devel::Cover
   - cpanm --quiet --notest --skip-satisfied git://github.com/codecov/codecov-perl.git
   - cover -delete
 script:
